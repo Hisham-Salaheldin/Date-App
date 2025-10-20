@@ -1,0 +1,156 @@
+@include breakpoint(500px){
+    main{
+        width: $full_width;
+        height: $full_height;
+        .main-container{
+            width: 90%;
+            height: auto;
+            // start register and sign in
+            .register{
+                    @include center-position;
+                    @include flex(row);
+                    width: 700px;
+                    height: 400px;
+                    border-radius: 20px;
+                form{
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 0;
+                    width: 200px;
+                    div{
+                        margin-bottom: 15px;
+                        label{
+                            font-size: 12px;
+                        }
+                        input{
+                            font-size: 12px;
+                            text-align: left;
+                            width: 200px;
+                            padding:5px; 
+                        }
+                        button{
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .set-card{
+                    @include center-relative;
+                    .inquiry{
+                        font-size: 12px;
+                        .inq-btn{
+                            font-size: 12px;
+                            padding: 5px;
+                        }
+                    }
+                }
+                .log-welcome{
+                    flex-basis: 50%;
+                    .brand-pos{
+                        .brand-box{
+                            transform: translateY(-30%);
+                            .brand{
+                                margin-bottom: 20px;
+                                p{
+                                    font-size: 12px;
+                                }
+                                h2{
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                        .brand-images{
+                            height: 200px;
+                            transform: translateY(-30%);
+                            .bnd-img{
+                                width: 100px;
+                            }
+                            .bnd-img1{
+                                right: 10%;
+                                top: -20px;
+                            }
+                            .bnd-img2{
+                                top: -15px;
+                                right:50%;
+                            }
+                            .bnd-img3{
+                                top: 80px;
+                                left: 10%;
+                            }
+                        }
+                    }
+                    .login-form{
+                        top:12%;
+                        left: 2%;
+                        width: 300px;
+                        margin-top: 0;
+                        transform: translateX(-400%);
+                        h2{
+                            @include h2-reg-log-format;
+                        }
+                        .submit-login{
+                            text-align: center;
+                            button{
+                                font-size: 12px;
+                                padding: 5px;
+                            }
+                        }
+                        .inq-phone{
+                            display: none;
+                        }
+                    }
+                }
+                .registeration{
+                    flex-basis: 50%;
+                    .hello-pos{
+                        position: relative;
+                        top:40%;
+                        color: mixColor($main-color,"c3");
+                        transform: translateY(-400%);
+                        transition: 1s;
+                        display: block;
+                    }
+                    .register-form{
+                        position: relative;
+                        top: -10%;
+                        left: 0;
+                        width: 100%;
+                        transform: translateX(0);
+                        h2{
+                            font-size: 25px;
+                            margin-top: 0;
+                        }
+                        .reg-form{
+                            .submit{
+                                @include flex(row);
+                                margin-top: 20px;
+                                position: static;
+                                right: 0;
+                                justify-content: space-around;
+                                transform: translateX(0);
+                                button{
+                                    font-size: 12px;
+                                    padding: 5px;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // end register and sign in
+        }
+    }
+
+    // registeration background
+    .reg-bag{
+        content: "";
+        position: absolute;
+        width: 700px;
+        height: 400px;
+        background: linear-gradient(to bottom,mixColor($main-color,"c1") 40%,mixColor($main-color,"c2"));
+        border-radius: 20px;
+        z-index: -1;
+        transform: translateX(-50%);
+        transition: 1s;
+    }
+}

@@ -1,0 +1,44 @@
+$brake-point:(
+    "xxs": 0,
+    "xsm": 428px,
+    "sm" : 576px,
+    "md": 720px,
+    "lg": 960px,
+    "xl": 1200px
+);
+@mixin xxs {
+    @media (min-width: map-get($brake-point, "xxs")) {
+        @content;
+    };
+};
+@mixin xsm {
+    @media (min-width: map-get($brake-point, "xsm")) {
+        @content;
+    };
+};
+@mixin sm {
+    @media (min-width: map-get($brake-point, "sm")) {
+        @content;
+    };
+};
+@mixin md {
+    @media (min-width: map-get($brake-point, "md")) {
+        @content;
+    };
+};
+@mixin lg {
+    @media (min-width: map-get($brake-point, "lg")) {
+        @content;
+    };
+};
+@mixin xl {
+    @media (min-width: map-get($brake-point, "xl")) {
+        @content;
+    };
+};
+
+@mixin breakpoint($bp : 0) {
+    @media (min-width: $bp) {
+        @content;
+    };
+};

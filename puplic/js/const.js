@@ -1,0 +1,10 @@
+export const gologBtn = document.querySelector(".go-login-btn");
+export const goRegBtn = document.querySelectorAll(".go-reg-btn");
+export const regBag = document.querySelector(".reg-bag");
+export const regForm = document.querySelector(".register-form");
+export const brand = document.querySelector(".brand-pos");
+export const bndBox = document.querySelector(".brand-box");
+export const bndImages = document.querySelector(".brand-images");
+export const helloBox = document.querySelector(".hello-pos");
+export const loginForm = document.querySelector(".login-form");
+export const inqPhone = document.querySelector(".inq-phone"); 

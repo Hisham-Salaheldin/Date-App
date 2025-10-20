@@ -1,0 +1,84 @@
+// animation
+@keyframes background_spin {
+    0%{
+        transform: rotate(0deg) scale(2);
+    }
+    100%{
+        transform: rotate(1turn) scale(2);
+    }
+}
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(2.5px);
+    }
+    50%{
+        transform: translateY(2.5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes bgTrans {
+    0%{
+        transform: translateX(-50%);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+@keyframes imgTrans {
+    0%{
+        transform: translateY(-300%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes bnTrans {
+    0%{
+        transform: translateY(400%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+//funtions
+@function mixColor ($var,$cc){
+    @return map-get($var, $cc);
+}
+
+// mixin
+@mixin center-position{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin full-fit{
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius;
+}
+@mixin flex($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+@mixin center-relative{
+    position: relative;
+    top: 20%;
+    // transform: translateY(-50%);
+    text-align: center;
+}
+@mixin h2-reg-log-format{
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.671);
+    text-align: center;
+    margin-bottom: 30px;
+}

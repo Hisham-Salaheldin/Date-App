@@ -1,0 +1,27 @@
+
+.blob-outer{
+        position: fixed;
+        width: $full_width;
+        height: $full_height;
+        z-index: -100;
+        inset: 0;
+        margin: auto;
+        background-color: #f342f0;
+        filter: blur(50px);
+        .blob-inner{
+            @extend .blob-outer;
+            position:absolute;
+            overflow: hidden;
+            border-radius: 99px;
+            background-color: #e64e4eff;
+            .blob{
+                @extend .blob-outer;
+                position: absolute;
+                background: conic-gradient( from 0deg, $female-color,
+                mixColor($mix-color,"c1"),mixColor($mix-color,"c2"),mixColor($mix-color,"c3"),
+                mixColor($mix-color,"c4"),mixColor($mix-color,"c5"),mixColor($mix-color,"c6"),mixColor($mix-color,"c7"),
+                mixColor($mix-color,"c8"));
+                animation: background_spin 8s linear infinite;
+            }
+        }
+    }

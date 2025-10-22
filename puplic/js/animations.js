@@ -71,4 +71,5 @@ export function backToMain () {
         translate(regForm,x,-200);
         translate(loginForm,x,0);
     }
+    document.removeEventListener("click", backToMain);
 } 

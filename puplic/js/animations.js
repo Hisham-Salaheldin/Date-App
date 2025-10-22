@@ -1,4 +1,4 @@
-import { goRegBtn,gologBtn,regBag,regForm,bndBox,bndImages,helloBox,loginForm,brand,inqPhone } from "./const.js";
+import { goRegBtn,gologBtn,regBackBtn,regBag,regForm,bndBox,bndImages,helloBox,loginForm,brand,inqPhone } from "./const.js";
 import { display, translate } from "./utility.js";
 
 const x = "X";
@@ -35,9 +35,10 @@ export function animateLogin() {
         translate(loginForm,x,0);
     }
     else if(window.innerWidth < 500){
-        translate(regBag,y,-400);
+        translate(regBag,y,-200);
         translate(brand,y,-400);
         translate(loginForm,x,0);
+        display(regBackBtn,"block");
     }
     document.removeEventListener("click", animateLogin);
 }
@@ -53,7 +54,21 @@ export function animateReg() {
     }
     else if(window.innerWidth < 500){
         translate(regForm,x,-50);
-        translate(loginForm,x,500);
+        translate(loginForm,x,400);
     }
     document.removeEventListener("click", animateReg);
 }
+export function backToMain () {
+    if(loginForm.style.transform === "translateX(0%)")
+    {
+        display(regBackBtn,"none");
+        translate(loginForm,x,400);
+        translate(regBag,y,0);
+        translate(brand,y,0);
+    }
+    else if(loginForm.style.transform === "translateX(400%)")
+    {
+        translate(regForm,x,-200);
+        translate(loginForm,x,0);
+    }
+} 

@@ -5,7 +5,6 @@
             // start register and sign in
             .register{
                     @include center-position;
-                    // @include flex(row);
                     width: 100vw;
                     height: 100vh;
                     background-color: mixColor($main-color,"c3");
@@ -80,11 +79,9 @@
                 }
 
                 .log-welcome{
-                    // flex-basis: 50%;
                     .brand-pos{
-                        // display: none;
+                        transition: 1s;
                         .brand-box{
-                            // transform: translateY(-30%);
                             transition: 1s;
                             .brand{
                                 margin-bottom: 20px;
@@ -141,7 +138,7 @@
                         top:10%;
                         margin-top: 10%;
                         width: 100%;
-                        transform: translateX(500%);//transform: translateX(0%)
+                        transform: translateX(200%);
                         transition: 1s;
                         h2{
                             @include h2-reg-log-format;
@@ -177,9 +174,8 @@
                         top: 10%;
                         left: 50%;
                         width: 100vw;
-                        transform: translateX(-500%);
+                        transform: translateX(-200%);
                         transition: 1s;
-                        // display: none;
                         h2{
                             @include h2-reg-log-format;
                             font-size: 2rem;
@@ -221,6 +217,15 @@
                             }
                         }
                     }
+                }
+                .back-btn-contianer{
+                    position: absolute;
+                    top: 5%;
+                    width: 10%;
+                    height: 5%;
+                    font-size: 1.3rem;
+                    text-align: center;
+                    display: none;
                 }
             }
             // end register and sign in

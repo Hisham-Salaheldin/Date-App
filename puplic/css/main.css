@@ -168,6 +168,9 @@
     top: 20%;
     text-align: center;
   }
+  .main-container .register .log-welcome .brand-pos {
+    transition: 1s;
+  }
   .main-container .register .log-welcome .brand-pos .brand-box {
     transition: 1s;
   }
@@ -224,7 +227,7 @@
     top: 10%;
     margin-top: 10%;
     width: 100%;
-    transform: translateX(500%);
+    transform: translateX(200%);
     transition: 1s;
   }
   .main-container .register .log-welcome .login-form h2 {
@@ -261,7 +264,7 @@
     top: 10%;
     left: 50%;
     width: 100vw;
-    transform: translateX(-500%);
+    transform: translateX(-200%);
     transition: 1s;
   }
   .main-container .register .registeration .register-form h2 {
@@ -305,6 +308,15 @@
   .main-container .register .registeration .register-form .reg-form .submit .female:hover {
     background-color: #FAF7F3;
     color: #FF0066;
+  }
+  .main-container .register .back-btn-contianer {
+    position: absolute;
+    top: 5%;
+    width: 10%;
+    height: 5%;
+    font-size: 1.3rem;
+    text-align: center;
+    display: none;
   }
   .reg-bag {
     content: "";
@@ -462,6 +474,9 @@
     font-size: 12px;
     padding: 5px;
     margin: 0;
+  }
+  main .main-container .register .back-btn-contianer {
+    display: none;
   }
   .reg-bag {
     content: "";
